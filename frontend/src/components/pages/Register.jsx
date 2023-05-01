@@ -18,7 +18,7 @@ const Register = () => {
     const handelSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8080/api/v1/auth/register', { username, email, password });
+            await axios.post('https://chatgpt-b-1.onrender.com/api/v1/auth/register', { username, email, password });
             toast.success("User register sucessfully");
             navigate("/login")
         } catch (err) {

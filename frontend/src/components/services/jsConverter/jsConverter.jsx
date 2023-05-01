@@ -15,7 +15,7 @@ const JsConverter = () => {
     const handelSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:8080/api/v1/openai/js-converter', { text: text });
+            const { data } = await axios.post('https://chatgpt-b-1.onrender.com/api/v1/openai/js-converter', { text: text });
             setCode(data);
         } catch (err) {
             console.log(err)

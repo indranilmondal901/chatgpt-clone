@@ -14,7 +14,7 @@ const Paragraph = () => {
     const handelSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:8080/api/v1/openai/paragraph', { text: text });
+            const { data } = await axios.post('https://chatgpt-b-1.onrender.com/api/v1/openai/paragraph', { text: text });
             // console.log(data)
             setParagraph(data);
         } catch (err) {

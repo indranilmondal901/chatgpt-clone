@@ -15,7 +15,7 @@ const Navbar = () => {
     // Logout controller
     const handelLogout = async () => {
         try {
-            await axios.post('http://localhost:8080/api/v1/auth/logout')
+            await axios.post('https://chatgpt-b-1.onrender.com/api/v1/auth/logout')
                 .then((res) => {
                     if (res.status === 200) {
                         localStorage.removeItem('authToken')
